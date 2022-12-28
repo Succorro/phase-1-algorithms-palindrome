@@ -1,9 +1,17 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let reverseWord = '';
+  for (let i = word.length - 1; i >= 0; i--){
+    reverseWord += word[i]
+  }
+return reverseWord === word
 }
 
 /* 
-  Add your pseudocode here
+  iterate over each letter of string,
+    if string is palindrome: 
+      return true
+    else: 
+      return false
 */
 
 /*
@@ -12,7 +20,9 @@ function isPalindrome(word) {
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+  console.log('Expecting : true')
+  console.log('=>', isPalindrome('kayak'));
+
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
